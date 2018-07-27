@@ -59,7 +59,7 @@ public class RestController {
 			//Chama o método calcularICMSReduzido() da classe CalculoTributos responsável por calcular ICMS Reduzido e armazena o retorno em um boolean true para calculo realizado ou false para erro desconhecido de cálculo
 			boolean calculoRealizado = calculoTributos.calcularICMSReduzido(carrinho.getItens().get(i));
 			//Se o cálculo de algum item der erro, o método retorna ResponseEntity Bad Request
-			if(!calculoRealizado) {
+			if(calculoRealizado == false) {
 				//Erro de cálculo identificado e retorna ResponseEntity Bad Request
 				return new ResponseEntity<>("Ocorreu um erro desconhecido ao calcular a tributação.", HttpStatus.BAD_REQUEST);
 			}
