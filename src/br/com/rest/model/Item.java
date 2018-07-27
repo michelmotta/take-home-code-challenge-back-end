@@ -2,6 +2,8 @@ package br.com.rest.model;
 
 import javax.validation.constraints.NotBlank;
 
+import org.springframework.format.annotation.NumberFormat;
+
 /**
 * Classe modelo para os objetos do tipo Item.
 *  
@@ -17,9 +19,9 @@ public class Item {
 	
 	private String codigo;
     private String descricao;
-    @NotBlank
+    @NotBlank @NumberFormat
     private double valorUnitario;
-    @NotBlank
+    @NotBlank @NumberFormat
     private int quantidade;
     private Tributos tributos;
     

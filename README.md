@@ -36,7 +36,7 @@ Dentro do diretório [implantacao](https://github.com/michelmotta/take-home-code
  POST http://localhost:8080/rest/icms/ 
 ```
 
-### Formato do Json Processado Pela API
+### Formato do Json Processado pela REST API
 
 A API REST é capaz de processar uma lista de itens em formato Json e retornar essa mesma lista de itens em formato Json, mas com os campos **baseDeCalculo** e **valorICMS** calculados para cada item da lista. A lógica de cálculo utilizada para o endpoint definido leva em consideração as regras de tributação do grupo de ICMS 20 (Grupo que calcula os tributos com redução na base de cálculo).
 

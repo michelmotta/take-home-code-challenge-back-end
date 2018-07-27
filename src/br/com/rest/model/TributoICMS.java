@@ -1,5 +1,9 @@
 package br.com.rest.model;
 
+import javax.validation.constraints.NotBlank;
+
+import org.springframework.format.annotation.NumberFormat;
+
 /**
 * Classe modelo para os objetos do tipo TributoICMS.
 *  
@@ -14,7 +18,9 @@ package br.com.rest.model;
 public class TributoICMS {
 	
 	private double baseDeCalculo;
+	@NotBlank @NumberFormat
     private double fatorDeReducaoDaBaseDeCalculo;
+	@NotBlank @NumberFormat
     private double aliquota;
     private double valorICMS;
     
