@@ -61,7 +61,7 @@ public class RestController {
 			//Se o cálculo de algum item der erro, o método retorna ResponseEntity Bad Request
 			if(calculoRealizado == false) {
 				//Erro de cálculo identificado e retorna ResponseEntity Bad Request
-				return new ResponseEntity<>("Ocorreu um erro desconhecido ao calcular a tributação.", HttpStatus.BAD_REQUEST);
+				return new ResponseEntity<String>("Ocorreu um erro desconhecido ao calcular a tributação.", HttpStatus.BAD_REQUEST);
 			}
 		}
 		// Os cálculos dos itens foram realizados com sucesso e retorna a lista Json
