@@ -46,19 +46,25 @@ public class RestController {
 	@RequestMapping(value = "/icms", method = RequestMethod.POST)
 	public ResponseEntity<?> calcularICMS(@Valid @RequestBody Carrinho carrinho, BindingResult result) {
 		
+		//Verifica se tem algum erro de validação das annotations das classes modelos.
 		if (result.hasErrors()) {
 			return new ResponseEntity<String>("teste", HttpStatus.BAD_REQUEST);
 		}
 		
+		//Instancia um objeto do tipo CalculoTributos, que é a classe responsável por calcular tributos de itens.
 		CalculoTributos calculoTributos = new CalculoTributos();
 		
+		//Percorre a lista de itens recebidos
 		for(int i = 0; i < carrinho.getItens().size(); i++){
+			//Chama o método calcularICMSReduzido() da classe CalculoTributos responsável por calcular ICMS Reduzido e armazena o retorno em um boolean true para calculo realizado ou false para erro desconhecido de cálculo
 			boolean calculoRealizado = calculoTributos.calcularICMSReduzido(carrinho.getItens().get(i));
+			//Se o cálculo de algum item der erro, o método retorna ResponseEntity Bad Request
 			if(!calculoRealizado) {
+				//Erro de cálculo identificado e retorna ResponseEntity Bad Request
 				return new ResponseEntity<>("teste", HttpStatus.BAD_REQUEST);
 			}
 		}
-		
+		// Os cálculos dos itens foram realizados com sucesso e retorna a lista Json
 		return new ResponseEntity<Carrinho>(carrinho, HttpStatus.OK);
 		
 	}
