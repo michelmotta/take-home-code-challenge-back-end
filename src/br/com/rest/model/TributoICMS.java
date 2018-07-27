@@ -38,7 +38,7 @@ public class TributoICMS {
 		return aliquota;
 	}
 	
-	public void setAliquota(float aliquota) {
+	public void setAliquota(double aliquota) {
 		this.aliquota = aliquota;
 	}
 	
