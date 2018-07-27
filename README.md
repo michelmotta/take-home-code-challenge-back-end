@@ -1,6 +1,4 @@
-# Take home code challenge (back-end) - KRATOS
-
-Este projeto foi implementado como segunda etapa do processo de seleção para desenvolvedor back-end Java para a empresa Kratos. 
+# DEDAFIO Take home code challenge (back-end)
 
 ## Objetivos do Projeto
 
@@ -32,7 +30,7 @@ Dentro do diretório [implantacao](https://github.com/michelmotta/take-home-code
 
 ## Detalhes Técnicos do Projeto
 
-##### EndPoint Para Requisições HTTP do Tipo POST com corpo Json
+##### Endpoint para requisições HTTP do tipo POST com corpo Json
 
 ```bash
  POST http://localhost:8080/rest/icms/ 
@@ -40,7 +38,7 @@ Dentro do diretório [implantacao](https://github.com/michelmotta/take-home-code
 
 ### Formato do Json Processado Pela API
 
-A API REST é capaz de processar uma lista de itens em formato Json e retornar essa mesma lista de itens em formato Json, mas com os campos **baseDeCalculo** e **valorICMS** calculados para cada item da lista. Observação: A lógica de cálculo utilizada para o endpoint definido
+A API REST é capaz de processar uma lista de itens em formato Json e retornar essa mesma lista de itens em formato Json, mas com os campos **baseDeCalculo** e **valorICMS** calculados para cada item da lista. A lógica de cálculo utilizada para o endpoint definido leva em consideração as regras de tributação do grupo de ICMS 20 (Grupo que calcula os tributos com redução na base de cálculo).
 
 #### Exemplo de Formato Json de Entrada
 ```json
@@ -55,7 +53,7 @@ A API REST é capaz de processar uma lista de itens em formato Json e retornar e
                 "ICMS": {
                     "baseDeCalculo": 0.00,
                     "fatorDeReducaoDaBaseDeCalculo": 58.824,
-                    "aliquota": 17,
+                    "aliquota": 17.00,
                     "valorICMS": 0.00
                 }
             }
@@ -69,7 +67,7 @@ A API REST é capaz de processar uma lista de itens em formato Json e retornar e
                 "ICMS": {
                     "baseDeCalculo": 0.00,
                     "fatorDeReducaoDaBaseDeCalculo": 58.824,
-                    "aliquota": 17,
+                    "aliquota": 17.00,
                     "valorICMS": 0.00
                 }
             }
