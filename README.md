@@ -18,6 +18,7 @@ O projeto foi desenvolvido utilizando Ferramentas/Tecnologias:
 * [Jackson Core 2.9.5](https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core) e [Jackson Databind 2.9.5](https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind)
 * [Apache Commons Math 3.6.1](https://mvnrepository.com/artifact/org.apache.commons/commons-math3)
 * [Validation API 2.0.1.Final](https://mvnrepository.com/artifact/javax.validation/validation-api)
+* [Hibernate Validator Engine 6.0.7.Final](https://mvnrepository.com/artifact/org.hibernate.validator/hibernate-validator)
 
 
 ## Como Utilizar Esse Projeto?
