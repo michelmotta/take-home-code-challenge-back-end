@@ -1,4 +1,4 @@
-# DEDAFIO Take home code challenge (back-end)
+# DESAFIO Take home code challenge (back-end)
 
 ## Objetivos do Projeto
 
