@@ -13,9 +13,36 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import br.com.rest.model.CalculoTributos;
 import br.com.rest.model.Carrinho;
 
+/**
+* Classe controladora da API REST.
+* 
+* Esta classe é responsável por delegar os métodos que 
+* devem ser executados quando uma requisição é enviada 
+* para as urls mapeadas através de @RequestMapping()
+*
+* @author  Michel Motta da Silva
+* @version 1.0
+* @since   2018-07-27
+*/
 @Controller
 public class RestController {
 	
+	/**
+	* Método responsável por receber requisições no endpont
+	* /icms.
+	* 
+	* Este método recebe requições do tipo POST no enpoint /icms  
+	* com um objeto Json no corpo da requisição. O objeto Json é
+	* mapeado para um objeto do tipo Carrinho através da biblioteca
+	* Jackson Databind. Este método retorna um ResponseEntity com
+	* código de status HTTP 200 ou 400.
+	* 
+	* @param Carrinho carrinho parâmetro do tipo Carrinho
+	* @return ResponseEntity<?> com status 200 ou 400
+	* @author  Michel Motta da Silva
+	* @version 1.0
+	* @since   2018-07-27
+	*/
 	@RequestMapping(value = "/icms", method = RequestMethod.POST)
 	public ResponseEntity<?> calcularICMS(@Valid @RequestBody Carrinho carrinho, BindingResult result) {
 		

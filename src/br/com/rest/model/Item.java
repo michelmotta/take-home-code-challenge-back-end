@@ -2,6 +2,17 @@ package br.com.rest.model;
 
 import javax.validation.constraints.NotBlank;
 
+/**
+* Classe modelo para os objetos do tipo Item.
+*  
+* Esta classe define todos os atributos e os seus respectivos
+* métodos Getters and Setters para objetos instânciados do 
+* tipo Item.
+*
+* @author  Michel Motta da Silva
+* @version 1.0
+* @since   2018-07-27
+*/
 public class Item {
 	
 	private String codigo;

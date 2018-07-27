@@ -1,5 +1,16 @@
 package br.com.rest.model;
 
+/**
+* Classe modelo para os objetos do tipo TributoICMS.
+*  
+* Esta classe define todos os atributos e os seus respectivos
+* métodos Getters and Setters para objetos instânciados do 
+* tipo TributoICMS.
+*
+* @author  Michel Motta da Silva
+* @version 1.0
+* @since   2018-07-27
+*/
 public class TributoICMS {
 	
 	private double baseDeCalculo;
