@@ -32,11 +32,18 @@ Dentro do diretório [implantacao](https://github.com/michelmotta/take-home-code
 
 ## Detalhes Técnicos do Projeto
 
-### Sobre a API
+##### EndPoint Para Requisições HTTP do Tipo POST com corpo Json
 
-| Exemplo de Entrada  | Saída do Exemplo de Entrada |
-| ------------- | ------------- |
-| ```json
+```bash
+ POST http://localhost:8080/rest/icms/ 
+```
+
+### Formato do Json Processado Pela API
+
+A API REST é capaz de processar uma lista de itens em formato Json e retornar essa mesma lista de itens em formato Json, mas com os campos **baseDeCalculo** e **valorICMS** calculados para cada item da lista. Observação: A lógica de cálculo utilizada para o endpoint definido
+
+#### Exemplo de Formato Json de Entrada
+```json
 {
     "itens": [
         {
@@ -69,7 +76,9 @@ Dentro do diretório [implantacao](https://github.com/michelmotta/take-home-code
         }
     ]
 }
-``` | ```json
+```
+#### Saída do Exemplo de Entrada
+```json
 {
     "itens": [
         {
@@ -102,6 +111,4 @@ Dentro do diretório [implantacao](https://github.com/michelmotta/take-home-code
         }
     ]
 }
-```  |
-
-
+```
