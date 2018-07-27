@@ -11,7 +11,7 @@
 		<jackson.version>2.9.5</jackson.version>
 	</properties>
 	<dependencies>
-		<!-- Spring Dependencies -->
+		<!-- Spring Dependências -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
@@ -27,6 +27,7 @@
 			<artifactId>spring-webmvc</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
+		<!-- Jackson Dependências -->
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-core</artifactId>
@@ -37,16 +38,19 @@
 			<artifactId>jackson-databind</artifactId>
 			<version>${jackson.version}</version>
 		</dependency>
+		<!-- Apache Commons Math Dependências -->
 		<dependency>
 	    	<groupId>org.apache.commons</groupId>
 	    	<artifactId>commons-math3</artifactId>
 	    	<version>3.6.1</version>
 		</dependency>
+		<!-- Validation Api Dependências -->
 		<dependency>
 		    <groupId>javax.validation</groupId>
 		    <artifactId>validation-api</artifactId>
 		    <version>2.0.1.Final</version>
 		</dependency>
+		<!-- Hibernate Validator Dependências -->
 		<dependency>
 		    <groupId>org.hibernate.validator</groupId>
 		    <artifactId>hibernate-validator</artifactId>
