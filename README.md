@@ -28,4 +28,4 @@ O projeto foi desenvolvido utilizando Ferramentas/Tecnologias:
 Este projeto foi desenvolvido utilizando o Eclipse Java EE para Web Developers, desta forma o conjunto de pastas se caracteriza como um projeto do Eclipse Java EE para Web Developers. Você precisa apenas baixar o projeto, colocar dentro de seu diretório de trabalho e realizar a importação do projeto através da interface do Eclipse.
 
 ### Utilizando o Arquivo de implantação WAR(Web application ARchive)
-Dentro do diretório 
+Dentro do diretório [implantacao](https://github.com/michelmotta/take-home-code-challenge-back-end/tree/master/implantacao) existe um arquivo de implantação para aplicações web baseadas em Java. Você precisa apenas baixar esse arquivo e colocar dentro da pasta de aplicativos web do seu servidor Java preferido.
