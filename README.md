@@ -28,4 +28,80 @@ O projeto foi desenvolvido utilizando Ferramentas/Tecnologias:
 Este projeto foi desenvolvido utilizando o Eclipse Java EE para Web Developers, desta forma o conjunto de pastas se caracteriza como um projeto do Eclipse Java EE para Web Developers. Você precisa apenas baixar o projeto, colocar dentro de seu diretório de trabalho e realizar a importação do projeto através da interface do Eclipse.
 
 ### Utilizando o Arquivo de implantação WAR(Web application ARchive)
-Dentro do diretório [implantacao](https://github.com/michelmotta/take-home-code-challenge-back-end/tree/master/implantacao) existe um arquivo de implantação para aplicações web baseadas em Java. Você precisa apenas baixar esse arquivo e colocar dentro da pasta de aplicativos web do seu servidor Java preferido.
+Dentro do diretório [implantacao](https://github.com/michelmotta/take-home-code-challenge-back-end/tree/master/implantacao) existe um arquivo de implantação para aplicações web baseadas em Java. Você precisa apenas baixar esse arquivo e colocar dentro da pasta de aplicações web do seu servidor Java preferido.
+
+## Detalhes Técnicos do Projeto
+
+### Sobre a API
+
+| Exemplo de Entrada  | Saída do Exemplo de Entrada |
+| ------------- | ------------- |
+| ```json
+{
+    "itens": [
+        {
+            "codigo": "COD01",
+            "descricao": "Descrição do item 1",
+            "valorUnitario": 1.50,
+            "quantidade": 3,
+            "tributos": {
+                "ICMS": {
+                    "baseDeCalculo": 0.00,
+                    "fatorDeReducaoDaBaseDeCalculo": 58.824,
+                    "aliquota": 17,
+                    "valorICMS": 0.00
+                }
+            }
+        },
+      	{
+            "codigo": "COD02",
+            "descricao": "Descrição do item 2",
+            "valorUnitario": 2.5,
+            "quantidade": 5,
+            "tributos": {
+                "ICMS": {
+                    "baseDeCalculo": 0.00,
+                    "fatorDeReducaoDaBaseDeCalculo": 58.824,
+                    "aliquota": 17,
+                    "valorICMS": 0.00
+                }
+            }
+        }
+    ]
+}
+``` | ```json
+{
+    "itens": [
+        {
+            "codigo": "COD01",
+            "descricao": "Descrição do item 1",
+            "valorUnitario": 1.5,
+            "quantidade": 3,
+            "tributos": {
+                "ICMS": {
+                    "baseDeCalculo": 1.85,
+                    "fatorDeReducaoDaBaseDeCalculo": 58.824,
+                    "aliquota": 17,
+                    "valorICMS": 0.31
+                }
+            }
+        },
+        {
+            "codigo": "COD02",
+            "descricao": "Descrição do item 2",
+            "valorUnitario": 2.5,
+            "quantidade": 5,
+            "tributos": {
+                "ICMS": {
+                    "baseDeCalculo": 5.15,
+                    "fatorDeReducaoDaBaseDeCalculo": 58.824,
+                    "aliquota": 17,
+                    "valorICMS": 0.87
+                }
+            }
+        }
+    ]
+}
+```  |
+
+
